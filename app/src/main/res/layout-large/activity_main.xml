@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageButton
+        android:layout_width="280dp"
+        android:layout_height="400dp"
+        android:id="@id/imageButtonId"
+        android:background="@drawable/bluetooth"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="getPairedList"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/imageButtonId"
+        android:layout_marginTop="70dp"
+        android:id="@id/onButtonId"
+        android:text="On"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/onButtonId"
+        android:layout_margin="10dp"
+        android:text="Off"
+        android:id="@id/offButtonId"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brightness: "
+        android:textSize="35sp"
+        android:id="@id/textView"
+        android:textColor="#000"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/offButtonId"
+        android:layout_alignLeft="@+id/imageButtonId"
+        android:layout_alignStart="@+id/imageButtonId"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:textColor="#000"
+        android:text="0"
+        android:id="@id/brightnessNum"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/offButtonId"
+        android:layout_alignStart="@+id/offButtonId"
+        android:id="@id/seekBarId"
+        android:max="253"
+        />
+
+</RelativeLayout>

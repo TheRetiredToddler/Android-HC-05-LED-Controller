@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.erick.activitycom.MainActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonId"
+        android:layout_width="165dp"
+        android:layout_height="220dp"
+        android:background="@drawable/bluetooth"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="getPairedList"
+        />
+
+    <TextView
+        android:id="@+id/statusTextId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:ems="10"
+        android:text="On"
+        android:id="@+id/onButtonId"
+        android:layout_marginStart="22dp"
+        android:layout_alignBaseline="@+id/offButtonId"
+        android:layout_alignBottom="@+id/offButtonId"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/onButtonId"
+        android:layout_below="@id/statusTextId"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:text="Off"
+        android:id="@+id/offButtonId" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/seekBarId"
+        android:max="253"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:text="Brightness:"
+        android:id="@+id/textView"
+        android:layout_above="@+id/seekBarId"
+        android:layout_alignLeft="@+id/imageButtonId"
+        android:layout_alignStart="@+id/imageButtonId" />
+
+    <TextView
+        android:id="@+id/brightnessNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignEnd="@+id/imageButtonId"
+        android:layout_alignRight="@+id/imageButtonId"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+</RelativeLayout>
