@@ -24,3 +24,31 @@ Note:
 	- Unfortanately, the app force closes the first to time that you scan for new devices
 	  (never managed to figure out the problem. Sorry...) & gives you the NullPointerException of
 	  death. Luckily, that has only ever happened to me the first time it scans!
+	  
+	  
+Here is the code I used for the Arduino - incase anyone wants to just do a quick test:
+
+	#define led 9
+
+	void setup()
+	{
+	  Serial.begin(9600);
+	  pinMode(led, OUTPUT);
+	}
+
+	void loop()
+	{
+	  int dataInt = (int) Serial.read();
+
+	  if (dataInt >= 0 && dataInt <= 253) {
+	    analogWrite(led, dataInt);
+	  } 
+
+	  if (dataInt == 254) {
+	    digitalWrite(led, HIGH);
+	  }
+
+	  if (dataInt == 255) {
+	    digitalWrite(led, LOW);
+	  }
+	}
